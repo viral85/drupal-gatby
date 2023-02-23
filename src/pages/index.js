@@ -14,10 +14,10 @@ const IndexPage = ({ data }) => {
         <ArticlePreview
           key={article.id}
           title={article.title}
-          body={article.body.summary ? article.body.summary.substring(0, 256) : article.body.processes.substring(0, 256)}
-          url={article.path.alias}
-          imageurl={article.relationships.field_image.localFile.childImageSharp.gatsbyImageData}
-          alt={article.field_image.alt}
+          body={article.body?.processes?.substring(0, 256)}
+          url={article.path?.alias}
+          imageurl={article.relationships.field_image?.localFile?.childImageSharp?.gatsbyImageData}
+          alt={article.field_image?.alt}
         ></ArticlePreview>
       ))}
     </Layout>
