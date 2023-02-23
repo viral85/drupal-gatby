@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Text } from "../stories/text";
+
 import ParagraphView from "../components/paragraphview";
+import Text from "../components/text";
 
 const Article = ({ data }) => {
   const article = data.nodeArticle;

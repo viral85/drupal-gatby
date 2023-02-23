@@ -2,7 +2,8 @@ import * as React from "react"
 import PropTypes from 'prop-types';
 import { Link } from "gatsby";
 import * as styles from "../components/index.module.css"
-import { Text } from "../stories/text";
+import Text from "./text";
+
 const ParagraphView = ({ title, body, url, imageurl, alt }) => (
     //     <div className={styles.container}>
     // <GatsbyImage image={imageurl} alt={alt} title={alt}
