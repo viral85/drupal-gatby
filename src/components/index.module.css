@@ -1,0 +1,92 @@
+.list {
+  display: grid;
+  margin: 0;
+  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
+  --w: 280px;
+  --n: 2;
+  gap: var(--size-gap);
+  grid-template-columns: repeat(auto-fit,
+      minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr));
+  margin-bottom: var(--size-gap);
+  margin-top: var(--size-gap);
+}
+
+.listItem {
+  margin: 0;
+}
+
+.listItem::marker {
+  color: #e95800;
+}
+
+.listItem:nth-child(2)::marker {
+  color: #159bf3;
+}
+
+.listItem:nth-child(3)::marker {
+  color: #8eb814;
+}
+
+.listItem:nth-child(4)::marker {
+  color: #663399;
+}
+
+.listItemLink {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.listItemDescription {
+  color: var(--color-text);
+  margin-bottom: 0;
+  margin-top: var(--space-1);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.intro {
+  max-width: none;
+  line-height: var(--line-height-loose);
+}
+
+
+.paragraph_header {
+  width: 100%;
+  height: 500px;
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+.paragraph_header .description {
+  width: 56%;
+  height: auto;
+  position: relative;
+  margin: auto;
+}
+
+.paragraph_header .description h2 {
+  padding-top: 100px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.paragraph_header .description>div {
+  text-align: center;
+  background: #552e2e6b;
+  padding: 30px;
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+
+.paragraph_header .description a {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: block;
+  width: 150px;
+  margin: auto;
+}
